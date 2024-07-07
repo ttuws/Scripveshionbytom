@@ -1,0 +1,22 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Turtle-Brand/Turtle-Lib/main/source.lua"))()
+
+local window = library:Window("Tom vesion  v1.6")
+
+-- Name of button, callback
+window:Button("Respawn", function()
+   print("pressed button")
+   game:GetService("ReplicatedStorage").Events.Respawn:FireServer()
+end)
+
+-- Name of button, callback
+window:Button("Fullbright", function()
+   print("pressed button")
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/ttuws/Fullbright-/main/fullbright%20.txt"))()
+end)
+
+-- Name of the toggle, default state of the toggle, callback
+
+window:Toggle("Auto Respawn", true, function(bool)
+    print(bool) -- bool is true or false depending on the state of the toggle
+    game:GetService("ReplicatedStorage").Events.Respawn:FireServer()
+end)
