@@ -20,3 +20,12 @@ window:Toggle("Auto Respawn", true, function(bool)
     print(bool) -- bool is true or false depending on the state of the toggle
     game:GetService("ReplicatedStorage").Events.Respawn:FireServer()
 end)
+
+-- Name, callback
+
+window:Box("Speed", function(text, focuslost)
+   if focuslost then
+   print(text)
+   end
+end)
+-- The callback will be called with two arguments, the text that the player inputted and whether the player has stopped writing
