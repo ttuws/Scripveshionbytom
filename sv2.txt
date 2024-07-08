@@ -1,6 +1,6 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Turtle-Brand/Turtle-Lib/main/source.lua"))()
 
-local window = library:Window("Tom vesion  v1.6")
+local window = library:Window("Tom vesion  v1.7")
 
 -- Name of button, callback
 window:Button("Respawn", function()
@@ -29,3 +29,9 @@ window:Box("Speed", function(text, focuslost)
    end
 end)
 -- The callback will be called with two arguments, the text that the player inputted and whether the player has stopped writing
+
+-- Name of the toggle, default state of the toggle, callback
+
+window:Toggle("Star speed", true, function(bool)
+    print(bool) -- bool is true or false depending on the state of the toggle
+end)
